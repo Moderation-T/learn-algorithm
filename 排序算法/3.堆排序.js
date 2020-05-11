@@ -76,3 +76,5 @@ function heapSort(arr) {
   }
   return arr;
 }
+
+console.log(heapSort(arr))
