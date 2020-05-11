@@ -17,9 +17,9 @@ Bubble Sort (冒泡排序 / 起泡排序)
 const arr = [23, 11, 54, 2, 6, 65, 78, 13, 9, 32, 69, 90, 20, 45, 76];
 
 // 外边的循环是实现 ②
-for (let j = arr.length; j > 0; j--) {
+for (let j = arr.length - 1; j > 0; j--) {
   // 这一层循环是执行 ①
-  for (let i = 1; i < j; i++) {
+  for (let i = 1; i <= j; i++) {
     if (arr[i] < arr[i - 1]) {
       const tmp = arr[i];
       arr[i] = arr[i - 1];
@@ -27,13 +27,12 @@ for (let j = arr.length; j > 0; j--) {
     }
   }
 }
-
 /* 优化一 */
 // 外边的循环是实现 ②
-for (let j = arr.length; j > 0; j--) {
+for (let j = arr.length - 1; j > 0; j--) {
   let sorted = true; // ③
   // 这一层循环是执行 ①
-  for (let i = 1; i < j; i++) {
+  for (let i = 1; i <= j; i++) {
     if (arr[i] < arr[i - 1]) {
       const tmp = arr[i];
       arr[i] = arr[i - 1];
@@ -49,10 +48,10 @@ for (let j = arr.length; j > 0; j--) {
 }
 
 /* 优化二 */
-for (let j = arr.length; j > 0; j--) {
+for (let j = arr.length - 1; j > 0; j--) {
   let sortedIndex = 1; // ④
   // 这一层循环是执行 ①
-  for (let i = 1; i < j; i++) {
+  for (let i = 1; i <= j; i++) {
     if (arr[i] < arr[i - 1]) {
       const tmp = arr[i];
       arr[i] = arr[i - 1];
@@ -64,5 +63,3 @@ for (let j = arr.length; j > 0; j--) {
   // ④
   j = sortedIndex;
 }
-
-console.log(arr);
