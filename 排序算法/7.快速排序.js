@@ -10,11 +10,11 @@ const arr = [23, 11, 54, 2, 6, 65, 78, 13, 9, 32, 69, 90, 20, 45, 76, 20];
 
 function quickSort(arr, begin, end) {
   if (end - begin < 2) return arr;
-  //轴点元素的Index
+  //获取轴点元素的Index
   let mid = pivotIndex(arr, begin, end); // 0
-  // 左边
+  // 左边进行快排
   quickSort(arr, begin, mid);
-  // 右边
+  // 右边进行快排
   quickSort(arr, mid + 1, arr.length);
 
   return arr;
@@ -25,6 +25,7 @@ function pivotIndex(arr, begin, end) {
   let pivot = arr[begin];
   end--;
 
+  // 左右交替进行比较
   while (begin < end) {
     while (begin < end) {
       if (arr[end] > pivot) {

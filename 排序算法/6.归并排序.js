@@ -23,9 +23,6 @@ function mergeSort(arr) {
 }
 
 function merge(left, right) {
-  console.log('left', left);
-  console.log('right', right);
-
   const result = [];
 
   // 两边都没交换完成
