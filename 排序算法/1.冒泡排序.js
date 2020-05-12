@@ -19,7 +19,7 @@ const arr = [23, 11, 54, 2, 6, 65, 78, 13, 9, 32, 69, 90, 20, 45, 76];
 // 外边的循环是实现 ②
 for (let j = arr.length - 1; j > 0; j--) {
   // 这一层循环是执行 ①
-  for (let i = 1; i <= j; i++) {
+  for (let i = 1; i <= j; i++) {   
     if (arr[i] < arr[i - 1]) {
       const tmp = arr[i];
       arr[i] = arr[i - 1];

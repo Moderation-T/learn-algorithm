@@ -1,5 +1,6 @@
 const arr = [2, 6, 9, 11, 13, 20, 23, 32, 45, 54, 65, 69, 76, 78, 90];
 
+
 function binarySearch(arr, value) {
   if (arr.length === 0 || arr === null) return -1;
   let begin = 0;
