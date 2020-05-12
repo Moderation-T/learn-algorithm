@@ -50,7 +50,7 @@ for (let i = 1; i < arr.length; i++) {
  *
  * @param {*} index 要查询的索引
  * @param {*} arr 当前的数组
- * @returns 返回要插入的位置 当begin === end 时候这个值就是要插入的位置 git s
+ * @returns 返回要插入的位置 当begin === end 时候这个值就是要插入的位置 
  */
 function binarySearch(index, arr) {
   let begin = 0;
