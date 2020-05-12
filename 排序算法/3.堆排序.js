@@ -50,7 +50,7 @@ function heapify(arr, i) {
     largest = right;
   }
 
-  if (largest != i) {
+  if (largest !== i) {
     // 交换值
     swap(arr, i, largest);
     // 继续下溢
