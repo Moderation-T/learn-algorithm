@@ -1,11 +1,9 @@
 /* 
 Bucket Sort (桶排序) 
 
-
+存小数：
+元素值 * 元素数量  -> 桶的数量
 
 */
 
-
-function (params) {
-  
-}
+const floatArr = [0.23, 0.34, 0.54, 0.66, 0.75];
