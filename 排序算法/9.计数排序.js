@@ -1,3 +1,13 @@
+/* 
+count sort (计数排序) 
+
+出现的值当做索引值出现一次加一一次
+
+——————————————————————————————————————————
+
+改进：
+*/
+
 const arr = [23, 11, 54, 2, 3, 11, 9, 9, 9, 6, 65, 78, 13, 9, 32, 69, 90, 20, 45, 76, 20];
 
 function countSort(arr, maxValue) {
@@ -10,7 +20,6 @@ function countSort(arr, maxValue) {
     if (!countArr[arr[i]]) {
       countArr[arr[i]] = 0;
     }
-
     countArr[arr[i]]++;
   }
 
