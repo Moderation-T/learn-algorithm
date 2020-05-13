@@ -1,5 +1,5 @@
 /*
- shell sort (希尔排序)
+ Shell Sort (希尔排序)
  
 */
 

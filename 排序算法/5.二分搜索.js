@@ -1,5 +1,5 @@
 /* 
-  binary search (二分搜索)
+  Binary Search (二分搜索)
 
   每次比较查找可去掉一半的值
 */

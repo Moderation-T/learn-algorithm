@@ -1,5 +1,5 @@
 /* 
-count sort (计数排序) 
+Count Sort (计数排序) 
 
 出现的值当做索引值出现一次加一一次
 
@@ -15,6 +15,7 @@ count
 
 index = k - min
 count = arr[index -1] + n
+result ->  result[[k - min] - 1] = k;
 */
 
 const arr = [23, 11, 54, 2, 3, 11, 9, 9, 9, 6, 65, 78, 13, 9, 32, 69, 90, 20, 45, 76, 20];
