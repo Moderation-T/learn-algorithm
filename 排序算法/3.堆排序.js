@@ -26,15 +26,15 @@ const arr = [23, 11, 54, 2, 6, 65, 78, 13, 9, 32, 69, 90, 20, 45, 76, 20];
 let len; // 因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
 // 建立打顶堆
-function buildMaxHeap(arr) {
+function heapify(arr) {
   len = arr.length;
   for (let i = Math.floor(len / 2); i >= 0; i--) {
-    heapify(arr, i);
+    sitDown(arr, i);
   }
 }
 
 // 堆序列进行原地建堆
-function heapify(arr, i) {
+function sitDown(arr, i) {
   // 堆调整
   let left = 2 * i + 1, // 左子节点
     right = 2 * i + 2, // 右子节点
@@ -54,7 +54,7 @@ function heapify(arr, i) {
     // 交换值
     swap(arr, i, largest);
     // 继续下溢
-    heapify(arr, largest);
+    sitDown(arr, largest);
   }
 }
 
@@ -67,12 +67,12 @@ function swap(arr, i, j) {
 
 // 堆排序
 function heapSort(arr) {
-  buildMaxHeap(arr); // 建堆
+  heapify(arr); // 建堆
 
   for (let i = arr.length - 1; i > 0; i--) {
     swap(arr, 0, i); // 交换最大值和最尾值位置
     len--; // size减1
-    heapify(arr, 0); // sift_down 操作
+    sitDown(arr, 0); // sift_down 操作
   }
   return arr;
 }
