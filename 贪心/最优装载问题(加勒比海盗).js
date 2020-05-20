@@ -25,7 +25,6 @@ function pirate(w, wis) {
     }
   }
 
-  return `海盗共装载了${count}件宝物，重量分别为${checked.map((item) => `${item}`)}`;
+  return `海盗共装载了${count}件宝物，重量分别为${checked}`;
 }
-≤µ≤
 console.log(pirate(w, wis));
