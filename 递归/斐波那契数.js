@@ -7,7 +7,7 @@ function fibonacciRecursion(n) {
   return fibonacciIteration(n - 1) + fibonacciIteration(n - 2);
 }
 
-// 递归方法优化 - 利用数组
+// 递归方法优化 - 利用数组 - 可以减少重复计算
 function fibonacciRecursionArray(n) {
   const array = new Array(n); // 储存的是第 n 个数字的和
   if (n === 0) {
@@ -32,9 +32,10 @@ function fibonacciIteration(n) {
   let first = 0;
   let second = 1;
   for (let i = 2; i <= n; i++) {
-    let tmp = second;
+    // let tmp = second;
     second = first + second;
-    first = tmp;
+    first = second - first;
+    // first = tmp;
   }
 
   return second;
